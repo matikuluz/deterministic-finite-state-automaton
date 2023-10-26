@@ -16,5 +16,14 @@ public class Tuple<X, Y> {
     public String toString() {
       return "(" + x + ", " + y + ")";
     }
-    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Tuple<?, ?> other = (Tuple<?, ?>) obj;
+        return (this.x != null ? this.x.equals(other.x) : other.x == null) &&
+                (this.y != null ? this.y.equals(other.y) : other.y == null);
+    }
+
 } 
