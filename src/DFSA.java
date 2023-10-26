@@ -39,4 +39,41 @@ public class DFSA {
         System.out.println("Start State (q0): " + q0);
         System.out.println("Final States (F): " + F);
     }
+
+    public String process(String input) {
+        if (input.length() == 0) { return this.q0; } // Base case
+
+        boolean crash = false;
+        int pointer = 0;
+        String currentState = this.q0;
+        char currentChar;
+        Tuple<String, Character> connection;
+        String result = "";
+
+        while (!crash && pointer < input.length()){
+
+            result = "";
+            currentChar = (char)input.charAt(pointer);
+            connection = new Tuple<>(currentState, currentChar);
+            // Search for connection
+            for (Tuple<String, Character> key : transitions.keySet()) {
+                if (key.equals( connection )) {
+                    result = transitions.get( key );
+                    break;
+                }
+            }
+            // If no connection found, crash
+            if (result == ""){ 
+                crash = true; 
+                result = "Crash";
+                break;
+            }
+            else {
+                // Moving to next state
+                currentState = result;
+            }
+            pointer++;
+        }
+        return result;
+    }
 }
