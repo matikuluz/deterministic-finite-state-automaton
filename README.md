@@ -20,5 +20,5 @@ A Deterministic Finite State Automaton (DFA) is a mathematical model used to rec
 
 ## Acknowledgments
 
-- The `Tuple.java` class used in this code is adapted from a [here](https://stackoverflow.com/questions/2670982/using-pairs-or-2-tuples-in-java).
+- The `Tuple.java` class used in this code is adapted from [here](https://stackoverflow.com/questions/2670982/using-pairs-or-2-tuples-in-java).
 
