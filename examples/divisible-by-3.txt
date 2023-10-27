@@ -1,0 +1,25 @@
+char[] chars = {'0', '1'};
+Set<Character> alphabet = new HashSet<>();
+for (char c : chars) { alphabet.add(c); }
+
+String[] positions = {"A", "B", "C"};
+Set<String> states = new HashSet<>();
+for (String s : positions) { states.add(s); }
+
+HashMap<Tuple<String, Character>, String> transitions = new HashMap<>();
+transitions.put(new Tuple<>("A", '0'), "A");
+transitions.put(new Tuple<>("A", '1'), "B");
+transitions.put(new Tuple<>("B", '0'), "C");
+transitions.put(new Tuple<>("B", '1'), "A");
+transitions.put(new Tuple<>("C", '0'), "B");
+transitions.put(new Tuple<>("C", '1'), "C");
+
+String q0 = "A";
+
+String[] finalSet = {"A"};
+Set<String> finalStates = new HashSet<>();
+for (String s : finalSet) { finalStates.add(s); }
+
+DFSA machine1 = new DFSA(alphabet, states, transitions, q0, finalStates);
+
+String output = machine1.process("11");
