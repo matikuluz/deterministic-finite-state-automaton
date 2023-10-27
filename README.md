@@ -8,7 +8,7 @@
 
 ## Introduction
 
-A Deterministic Finite State Automaton (DFSA) is a mathematical model used to recognize patterns in input sequences. In this repository, you'll find a simple Java implementation of a DFSA. The `DFSA.java` class represents the DFSA, and the `SystemManager.java` class demonstrates how to create and use the DFSA.
+A Deterministic Finite State Automaton (DFSA) is a mathematical model used to recognize patterns in input sequences. In this repository, you'll find a simple Java implementation of a DFSA. The DFSA.java class represents the automaton, and the SystemManager.java class demonstrates how to create and use it.
 
 ## Files
 
