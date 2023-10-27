@@ -1,7 +1,5 @@
 # deterministic-finite-state-automaton
 
-# Deterministic Finite State Automaton (DFA) Example
-
 This Git repository contains Java code for a Deterministic Finite State Automaton (DFA) implementation. It includes three main files:
 
 1. `DFSA.java`: A Java class representing a DFA and its core functionality.
